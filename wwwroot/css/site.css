@@ -1,20 +1,20 @@
 .container-fluid.main {
-    position: relative; /* To make the navbar positions relative to this container */
+    position: relative;
     padding: 0;
 }
 
 .navbar-default {
     background-image: none;
-    background-color: transparent; /* Make the menu become transparent */
+    background-color: transparent;
     border-radius: 0px;
     border: 0;
     box-shadow: none;
     padding: 10px;
-    position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+    z-index: 10;
 }
 
     .navbar-default .navbar-brand {
@@ -64,7 +64,7 @@
 
 @media (max-width:991px) {
     .carousel .background {
-        background-size: cover; /* To make the background image looks good */
+        background-size: cover;
     }
 }
 
@@ -82,14 +82,13 @@
 
 .carousel-fade .carousel-inner .item {
     opacity: 0;
-    transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+    transition: opacity 0.5s;
 }
 
 .carousel-fade .carousel-inner .active {
     opacity: 1;
 }
 
-/* CSS Hack to trigger GPU for smooth transition */
 @media all and (transform-3d), (-webkit-transform-3d) {
     .carousel-fade .carousel-inner > .item.next,
     .carousel-fade .carousel-inner > .item.active.right {
@@ -113,13 +112,12 @@
             transform: translate3d(0, 0, 0);
         }
 }
-/* CSS Hack to trigger GPU for smooth transition */
 
 .covertext {
-    position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
-    top: 200px; /* The distance between the div with the top of document */
-    left: 0px; /* Make the div full width */
-    right: 0px; /* Make the div full width */
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 0px;
 }
 
 .title {
@@ -174,3 +172,34 @@
         color: #ffffff;
         outline: none;
     }
+
+/* Custom styling for the navigation bar */
+.navbar {
+    background-color: #000; /* Black background */
+}
+
+.navbar-brand {
+    font-family: Verdana;
+    color: #fff; /* White text */
+    font-size: 20px;
+}
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+        color: #fff; /* White text on hover/focus */
+        background-color: transparent;
+    }
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text */
+}
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: #000; /* Black text on hover/focus */
+        background-color: #FFD700; /* Yellow background */
+    }
+
+.navbar-toggler-icon {
+    background-color: #fff; /* White color for the toggler icon */
+}

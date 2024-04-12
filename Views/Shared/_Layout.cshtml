@@ -10,6 +10,27 @@
 </head>
 <body>
     <header>
+        <style>
+            /* Custom styling for the navigation bar */
+            .navbar {
+                background-color: #f8f9fa; /* Background color */
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem; /* Increase font size of the brand */
+                color: #343a40; /* Brand text color */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 1.1rem; /* Font size of the navigation links */
+                color: #343a40; /* Navigation links color */
+            }
+
+                .navbar-nav .nav-link:hover {
+                    color: #007bff; /* Change color on hover */
+                }
+        </style>
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Find Bull's Den'</a>
@@ -34,11 +55,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
