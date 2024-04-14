@@ -1,7 +1,84 @@
-﻿@{
-    ViewData["Title"] = "Find lease";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Properties</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+</head>
+<body>
+    <div class="container-fluid main">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Find Properties</a>
+        </nav>
 
-
-
+        <main>
+            <section class="search">
+                <form action="#" method="GET">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="bedrooms">Bedrooms:</label>
+                                <input type="number" id="bedrooms" name="bedrooms" class="form-control" min="1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="bathrooms">Bathrooms:</label>
+                                <input type="number" id="bathrooms" name="bathrooms" class="form-control" min="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="price">Price Range:</label>
+                                <input type="number" id="min-price" name="min-price" class="form-control" placeholder="Min" min="0">
+                                <input type="number" id="max-price" name="max-price" class="form-control" placeholder="Max" min="0">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="bull-runner-availability">Bull Runner Availability:</label>
+                                <select id="bull-runner-availability" name="bull-runner-availability" class="form-control">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="availability-within">Availability Within:</label>
+                                <select id="availability-within" name="availability-within" class="form-control">
+                                    <option value="1-day">1 Day</option>
+                                    <option value="1-week">1 Week</option>
+                                    <option value="2-weeks">2 Weeks</option>
+                                    <option value="1-month">1 Month</option>
+                                    <option value="2-months">2 Months</option>
+                                    <option value="3-months">3 Months</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="distance-from-usf">Distance from USF:</label>
+                                <input type="number" id="distance-from-usf" name="distance-from-usf" class="form-control" placeholder="Distance from USF">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
